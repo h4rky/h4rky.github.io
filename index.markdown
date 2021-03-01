@@ -4,5 +4,7 @@
 
 layout: home
 ---
-
-
+```java
+//Generate some code
+coffee.forEach(cup -> programmer(cup));
+```
