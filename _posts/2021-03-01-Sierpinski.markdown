@@ -6,4 +6,4 @@ categories: blog
 ---
 
 
-![nicolas-hippert-sierpinski-street-art.jpg]()
+![/assets/nicolas-hippert-sierpinski-street-art.jpg]()
