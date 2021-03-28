@@ -28,6 +28,7 @@ url: "https://hark.page" # the base hostname & protocol for your site, e.g. http
 theme: minima
 plugins:
   - jekyll-feed
+show_excerpts: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
