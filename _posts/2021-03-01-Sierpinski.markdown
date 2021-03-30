@@ -7,5 +7,4 @@ categories: blog
 
 
 ![](/assets/nicolas-hippert-sierpinski-street-art.jpg)
-
 Photo by [Nicolas Hippert](https://unsplash.com/photos/5vNKjaAXcHM)
