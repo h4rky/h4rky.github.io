@@ -25,4 +25,4 @@ Less than a month later I would watch trails of anti-aircraft fire illuminating 
 ![](/assets/static_tv3.jpg)
 Photo by [Jisun Han](https://unsplash.com/photos/GYYeBqVwpZI)
 
-I would ride the bus to and from school, watching the world rush by. One time I saw a shirtless man for a split second. His body was covered in deep crimson slashes, knife lacerations which glistened in the sun. He immediately collapsed, his head bouncing hard as it hit the asphalt. Although the memory pops into my head with some regularity, I remember I didn't feel all that disturbed at the time. I was used to watching violence through glass.
+I would ride the bus to and from school, watching the world rush by through the window. One time I saw a shirtless man for a split second. His body was covered in deep crimson slashes, knife lacerations which glistened in the sun. He immediately collapsed, his head bouncing hard as it hit the asphalt. Although the memory pops into my head with some regularity, I remember I didn't feel all that disturbed at the time. I was used to watching violence through glass.
