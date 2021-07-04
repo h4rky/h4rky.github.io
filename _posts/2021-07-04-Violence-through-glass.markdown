@@ -9,8 +9,8 @@ It wasn't often that I would see my paternal grandfather. He lived across the At
 
 That same year I would come home from school and sit in the kitchen while my mother prepared dinner and the TV chattered in the background. Often, Paco Stanley (a popular TV host in Mexico at the time) would be the source of the chatter. Every day I'd come home, and every day he'd be in the background. Until one day [he wasn't](https://www.theguardian.com/world/1999/jun/13/mexico). Instead, the reason for his absence was repeated over and over. His assassination took seconds, but on TV it lasted days. It made a lasting impression on my mind, it showed me that no one was safe.
 
----
-
+![](/assets/static_tv.jpg)
+Photo by [aj_aaaab](https://unsplash.com/photos/UuGGxuBfYic)
 
 Recently I rediscovered a song which I hadn't heard for twenty years. Back then I didn't know the title or the name of the band, I just remember it playing on the radio while I rode the bus to and from school. [Listening to it](https://www.youtube.com/watch?v=Ft1lxiWFbDk) steeped me in strong memories.
 
