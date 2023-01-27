@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Excerpt from letter, 19 May 2020"
-date:   2023-01-27 23:00:00 +0000
+date:   2023-01-27 22:00:00 +0000
 categories: blog
 ---
 
