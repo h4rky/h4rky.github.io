@@ -25,7 +25,7 @@ div{
     width: 10%;
     display: grid;
     grid-template-columns: repeat(10, 1fr); /* 10 columns */
-    gap: 15px
+    gap: 10px
   }
 
   INPUT[type=checkbox]:focus
