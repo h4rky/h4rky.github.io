@@ -8,6 +8,7 @@
 body {
   font-family: Arial, sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -25,6 +26,26 @@ div.checkbox {
   width: 17px;
   height: 17px;
   position: relative;
+}
+
+div.clickable {
+  cursor: pointer;
+}
+
+div.clickable:hover{
+  opacity: 60%;
+}
+
+div.logs {
+  width: 26em;
+  text-align: left;
+}
+
+div.logs h2 {
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
 }
 
 .checkbox-container {
