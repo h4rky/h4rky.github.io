@@ -8,10 +8,10 @@
 body {
   font-family: Arial, sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0;
-  height: 100vh;
   background-color: var(--background);
   position: relative;
   color: var(--dark)
@@ -21,34 +21,42 @@ div{
   text-align: center;
 }
 
+div.checkbox {
+  width: 17px;
+  height: 17px;
+  position: relative;
+}
+
+div.clickable {
+  cursor: pointer;
+}
+
+div.clickable:hover{
+  opacity: 60%;
+}
+
+div.log-container {
+  width: 22em;
+  text-align: justify;
+  hyphens: auto;
+  margin-top: 2em;
+}
+
+div.log-container h2 {
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+}
+
 .checkbox-container {
-    width: 10%;
     display: grid;
     grid-template-columns: repeat(10, 1fr); /* 10 columns */
-    gap: 10px
+    gap: 13px
   }
 
-  INPUT[type=checkbox]:focus
-  {
-      outline: 1px solid var(--dark);
-  }
-  
-  INPUT[type=checkbox]
-  {
-      background-color: var(--light);
-      border-radius: 2px;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      width: 17px;
-      height: 17px;
-      cursor: pointer;
-      position: relative;
-      top: 5px;
-  }
-  
-  INPUT[type=checkbox]:checked
-  {
-      background-color: var(--accent-subdued);
-      background: var(--accent-subdued) url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 3px 3px no-repeat;
-  }
+.crimson-text-semibold {
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+  font-style: normal;
+}
