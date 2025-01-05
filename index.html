@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hark's "Do 100 things"</title>
         <link id="pagestyle" rel="stylesheet" href="style.css">
+        <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
         </style>
@@ -14,6 +15,7 @@
             <h1 class="crimson-text-semibold">Hark's "Do 100 things"</h1>
             <p>Commit. Act. Complete.</p>
             <div id="checkbox-container" class="checkbox-container"></div>
+            <div id="log-navigation"><i id="log-nav-prev" class="las la-arrow-left nav-icon" onclick="load_prev_log()"></i><i id="log-nav-next" class="las la-arrow-right nav-icon" onclick="load_next_log()"></i><div>
         </div>
         <div id="log-container" class="log-container"></div>
         <script src="main.js"></script>
