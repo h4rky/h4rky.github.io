@@ -5,8 +5,11 @@ let container_log = document.getElementById("log-container");
 let log_nav_prev = document.getElementById("log-nav-prev");
 let log_nav_next = document.getElementById("log-nav-next");
 
-const box_not_done = `<svg width="17" height="17"><rect width="17" height="17" rx="2" ry="2" fill="#c8c2ae"/></svg>`;
-const box_done = `<svg width="17" height="17"><rect width="17" height="17" rx="2" ry="2" fill="#57a773"/><polyline points="3,9 7,13 14,4" fill="none" stroke="white" stroke-width="2"></polyline></svg>`;
+const SLUG_START = "./do-100-logs/";
+const SLUG_END = ".html";
+
+const BOX_NOT_DONE = `<svg width="17" height="17"><rect width="17" height="17" rx="2" ry="2" fill="#c8c2ae"/></svg>`;
+const BOX_DONE = `<svg width="17" height="17"><rect width="17" height="17" rx="2" ry="2" fill="#57a773"/><polyline points="3,9 7,13 14,4" fill="none" stroke="white" stroke-width="2"></polyline></svg>`;
 
 let array = [...Array(done_count+1).keys()].slice(1);
 let array_not_done = Array(100 - done_count).fill(false);
@@ -28,11 +31,7 @@ function set_nav_display() {
 }
 
 function generate_slug(log_i) {
-    return "./do-100-logs/" + log_i.toString() + ".html"
-}
-
-function extract_log_n_slug(slug){
-    return Number(slug.match(/(?<=\/)(\d+)(?=\.html)/)[0]);
+    return SLUG_START + log_i.toString() + SLUG_END;
 }
 
 function load_log(slug) {
@@ -44,34 +43,42 @@ function load_log(slug) {
     .catch(error => console.error('Error loading HTML:', error));
 }
 
-function load_log_checkbox(slug){
-    load_log(slug);
-    curr_log = extract_log_n_slug(slug);
+function navigate_to_log(target_log){
+    curr_log = target_log;
+    load_log(generate_slug(curr_log));
     set_nav_display();
+}
+
+function load_first_log(){
+    navigate_to_log(1);
+}
+
+function load_latest_log(){
+    navigate_to_log(done_count);
 }
 
 function load_next_log(){
-    load_log(generate_slug(curr_log += 1));
-    set_nav_display();
+    navigate_to_log(curr_log += 1);
 }
 
 function load_prev_log(){
-    load_log(generate_slug(curr_log -= 1));
-    set_nav_display();
+    navigate_to_log(curr_log -= 1);
 }
 
 array.forEach(element => {
     let checkbox = document.createElement("div");
     checkbox.setAttribute("class", "checkbox");
+    checkbox.setAttribute("id", "checkbox_" + element.toString());
     
     if (element) {
         // Generate checkbox which will load corresponding log when clicked
-        checkbox.innerHTML = box_done;
-        checkbox.setAttribute("onclick", "load_log_checkbox(\"" + generate_slug(element) + "\")");
+        checkbox.innerHTML = BOX_DONE;
+        //checkbox.setAttribute("onclick", "navigate_to_log(\"" + generate_slug(element) + "\")");
+        checkbox.setAttribute("onclick", "navigate_to_log(" + element + ")");
         checkbox.setAttribute("class", "checkbox clickable");      
     } else {
         // Load empty checkbox
-        checkbox.innerHTML = box_not_done;
+        checkbox.innerHTML = BOX_NOT_DONE;
     }
 
     container_checkbox.appendChild(checkbox);
