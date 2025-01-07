@@ -83,3 +83,7 @@ div.log-container p {
   font-weight: 400;
   font-style: normal;
 }
+
+i.nav-icon {
+  font-size: 32px;
+}
