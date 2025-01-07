@@ -1,9 +1,12 @@
-let done_count = 4;
-let curr_log = 1;
+const DONE_COUNT = 4;
+
 let container_checkbox = document.getElementById("checkbox-container");
 let container_log = document.getElementById("log-container");
 let log_nav_prev = document.getElementById("log-nav-prev");
 let log_nav_next = document.getElementById("log-nav-next");
+let curr_log;
+
+const FIRST_LOG = 1;
 
 const SLUG_START = "./do-100-logs/";
 const SLUG_END = ".html";
@@ -11,20 +14,19 @@ const SLUG_END = ".html";
 const BOX_NOT_DONE = `<svg width="17" height="17"><rect width="17" height="17" rx="2" ry="2" fill="#c8c2ae"/></svg>`;
 const BOX_DONE = `<svg width="17" height="17"><rect width="17" height="17" rx="2" ry="2" fill="#57a773"/><polyline points="3,9 7,13 14,4" fill="none" stroke="white" stroke-width="2"></polyline></svg>`;
 
-let array = [...Array(done_count+1).keys()].slice(1);
-let array_not_done = Array(100 - done_count).fill(false);
+let array = [...Array(DONE_COUNT+1).keys()].slice(1);
+let array_not_done = Array(100 - DONE_COUNT).fill(false);
 array = array.concat(array_not_done);
-
 
 
 function set_nav_display() {
     if (curr_log == 1) {
         log_nav_prev.style.visibility = "hidden";
         log_nav_next.style.visibility = "visible";
-    } else if (curr_log == done_count){
+    } else if (curr_log == DONE_COUNT){
         log_nav_prev.style.visibility = "visible";
         log_nav_next.style.visibility = "hidden";
-    } else if (curr_log > 1 && curr_log < done_count) {
+    } else if (curr_log > 1 && curr_log < DONE_COUNT) {
         log_nav_prev.style.visibility = "visible";
         log_nav_next.style.visibility = "visible";
     }
@@ -50,11 +52,11 @@ function navigate_to_log(target_log){
 }
 
 function load_first_log(){
-    navigate_to_log(1);
+    navigate_to_log(FIRST_LOG);
 }
 
 function load_latest_log(){
-    navigate_to_log(done_count);
+    navigate_to_log(DONE_COUNT);
 }
 
 function load_next_log(){
@@ -73,7 +75,6 @@ array.forEach(element => {
     if (element) {
         // Generate checkbox which will load corresponding log when clicked
         checkbox.innerHTML = BOX_DONE;
-        //checkbox.setAttribute("onclick", "navigate_to_log(\"" + generate_slug(element) + "\")");
         checkbox.setAttribute("onclick", "navigate_to_log(" + element + ")");
         checkbox.setAttribute("class", "checkbox clickable");      
     } else {
@@ -85,5 +86,4 @@ array.forEach(element => {
 });
 
 // Load the first log by default
-load_log(generate_slug(curr_log));
-set_nav_display();
+navigate_to_log(FIRST_LOG);
