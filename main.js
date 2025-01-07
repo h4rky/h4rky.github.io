@@ -1,4 +1,4 @@
-let done_count = 3;
+let done_count = 4;
 let container_checkbox = document.getElementById("checkbox-container");
 let container_log = document.getElementById("log-container");
 

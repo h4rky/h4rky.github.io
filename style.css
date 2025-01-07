@@ -37,9 +37,14 @@ div.clickable:hover{
 
 div.log-container {
   width: 19em;
+  font-family: "Rethink Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   text-align: left;
   hyphens: auto;
-  margin-top: 2em;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 div.log-container h2 {
@@ -47,6 +52,18 @@ div.log-container h2 {
   font-weight: 600;
   font-style: normal;
   text-align: center;
+}
+
+div.log-container img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+}
+
+div.log-container p {
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 .checkbox-container {
@@ -58,5 +75,12 @@ div.log-container h2 {
 .crimson-text-semibold {
   font-family: "Crimson Text", serif;
   font-weight: 600;
+  font-style: normal;
+}
+
+.rethink-sans-400 {
+  font-family: "Rethink Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
 }
