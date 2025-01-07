@@ -27,11 +27,11 @@ div.checkbox {
   position: relative;
 }
 
-div.clickable {
+.clickable {
   cursor: pointer;
 }
 
-div.clickable:hover{
+.clickable:hover{
   opacity: 60%;
 }
 

@@ -15,7 +15,10 @@
             <h1 class="crimson-text-semibold">Hark's "Do 100 things"</h1>
             <p>Commit. Act. Complete.</p>
             <div id="checkbox-container" class="checkbox-container"></div>
-            <div id="log-navigation"><i id="log-nav-prev" class="las la-arrow-left nav-icon" onclick="load_prev_log()"></i><i id="log-nav-next" class="las la-arrow-right nav-icon" onclick="load_next_log()"></i><div>
+            <div id="log-navigation">
+                <i id="log-nav-prev" class="las la-arrow-left nav-icon clickable" onclick="load_prev_log()"></i>
+                <i id="log-nav-next" class="las la-arrow-right nav-icon clickable" onclick="load_next_log()"></i>
+            </div>
         </div>
         <div id="log-container" class="log-container"></div>
         <script src="main.js"></script>
