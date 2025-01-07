@@ -6,7 +6,10 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Rethink Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,13 +40,8 @@ div.checkbox {
 
 div.log-container {
   width: 300px;
-  font-family: "Rethink Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
   text-align: left;
   hyphens: auto;
-  margin-top: 2em;
 }
 
 div.log-container h2 {
@@ -71,6 +69,14 @@ div.log-container p {
     gap: 13px
   }
 
+div.log-navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 1em;
+}
+
 .crimson-text-semibold {
   font-family: "Crimson Text", serif;
   font-weight: 600;
@@ -84,6 +90,11 @@ div.log-container p {
   font-style: normal;
 }
 
+.nav-icon {
+  cursor: pointer;
+  text-align: center;
+}
+
 i.nav-icon {
-  font-size: 32px;
+  font-size: 30px;
 }
