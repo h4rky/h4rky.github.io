@@ -36,7 +36,11 @@ div.checkbox {
 }
 
 div.log-container {
-  width: 19em;
+  width: 300px;
+  font-family: "Rethink Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   text-align: left;
   hyphens: auto;
   margin-top: 2em;
@@ -47,6 +51,18 @@ div.log-container h2 {
   font-weight: 600;
   font-style: normal;
   text-align: center;
+}
+
+div.log-container img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+}
+
+div.log-container p {
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 .checkbox-container {
@@ -61,6 +77,9 @@ div.log-container h2 {
   font-style: normal;
 }
 
-i.nav-icon {
-  font-size: 32px;
+.rethink-sans-400 {
+  font-family: "Rethink Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
