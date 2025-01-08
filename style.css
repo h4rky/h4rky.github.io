@@ -32,6 +32,20 @@ div.checkbox {
   position: relative;
 }
 
+div.checkbox.checked {
+  background-color: var(--accent-subdued);
+}
+
+div.checkbox.unchecked {
+  background-color: var(--light);
+}
+
+svg.checkmark {
+  stroke: var(--background);
+  width: "17";
+  height: "17";
+}
+
 .clickable {
   cursor: pointer;
 }

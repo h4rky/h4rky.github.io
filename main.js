@@ -10,8 +10,7 @@ const FIRST_LOG = 1;
 const SLUG_START = "./do-100-logs/";
 const SLUG_END = ".html";
 
-const BOX_NOT_DONE = `<svg width="17" height="17"><rect width="17" height="17" rx="2" ry="2" fill="#c8c2ae"/></svg>`;
-const BOX_DONE = `<svg width="17" height="17"><rect width="17" height="17" rx="2" ry="2" fill="#57a773"/><polyline points="3,9 7,13 14,4" fill="none" stroke="white" stroke-width="2"></polyline></svg>`;
+const BOX_CHECKMARK = `<svg class="checkmark"><polyline points="3,9 7,13 14,4" fill="none" stroke-width="2"></polyline></svg>`;
 
 let array = [...Array(DONE_COUNT+1).keys()].slice(1);
 let array_not_done = Array(100 - DONE_COUNT).fill(false);
@@ -80,17 +79,16 @@ function set_checkbox_focus(target_log){
 
 array.forEach(element => {
     let checkbox = document.createElement("div");
-    checkbox.setAttribute("class", "checkbox");
     checkbox.setAttribute("id", "checkbox_" + element.toString());
     
     if (element) {
         // Generate checkbox which will load corresponding log when clicked
-        checkbox.innerHTML = BOX_DONE;
+        checkbox.innerHTML = BOX_CHECKMARK;
         checkbox.setAttribute("onclick", "navigate_to_log(" + element + ")");
-        checkbox.setAttribute("class", "checkbox clickable");      
+        checkbox.setAttribute("class", "checkbox checked clickable");      
     } else {
         // Load empty checkbox
-        checkbox.innerHTML = BOX_NOT_DONE;
+        checkbox.setAttribute("class", "checkbox unchecked"); 
     }
 
     container_checkbox.appendChild(checkbox);
