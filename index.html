@@ -3,11 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hark's "Do 100 things"</title>
+        <title>hark.page</title>
         <link id="pagestyle" rel="stylesheet" href="style.css">
-        <!--<style>
-            @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
-        </style>-->
+        <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+        <link rel="icon" type="image/x-icon" href="./favicon.svg">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
         </style>
@@ -15,8 +14,14 @@
     <body>
         <div>
             <h1 class="crimson-text-semibold">Hark's "Do 100 things"</h1>
-            <p class="rethink-sans-400">Commit. Act. Complete.</p>
+            <p>Commit. Act. Complete.</p>
             <div id="checkbox-container" class="checkbox-container"></div>
+            <div class="log-navigation-container">
+                <i id="log-nav-prev" class="las la-arrow-left nav-icon clickable" onclick="load_prev_log()"></i>
+                <div id="log-nav-first" class="nav-icon clickable" onclick="load_first_log()">First</div>
+                <div id="log-nav-latest" class="nav-icon clickable" onclick="load_latest_log()">Latest</div>
+                <i id="log-nav-next" class="las la-arrow-right nav-icon clickable" onclick="load_next_log()"></i>
+            </div>
         </div>
         <div id="log-container" class="log-container"></div>
         <script src="main.js"></script>

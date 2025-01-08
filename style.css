@@ -2,11 +2,15 @@
   --dark: #2B4141;
   --light: #c8c2ae;
   --accent-subdued: #57a773;
-  --background: #f4f4f4;
+  --background: #F9F3F1;
+  --highlight: #f38153;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Rethink Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,27 +28,43 @@ div{
 div.checkbox {
   width: 17px;
   height: 17px;
+  border-radius: 2px;
   position: relative;
 }
 
-div.clickable {
+div.checkbox.checked {
+  background-color: var(--accent-subdued);
+}
+
+div.checkbox.unchecked {
+  background-color: var(--light);
+}
+
+svg.checkmark {
+  stroke: var(--background);
+  width: 17px;
+  height: 17px;
+}
+
+.clickable {
   cursor: pointer;
 }
 
-div.clickable:hover{
+.clickable:hover{
   opacity: 60%;
 }
 
+div.selected {
+  /*border: 2px solid;
+  border-radius: 3px;
+  border-color: var(--highlight);*/
+  box-shadow: 0 0 3px 2px var(--highlight);
+}
+
 div.log-container {
-  width: 19em;
-  font-family: "Rethink Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+  width: 300px;
   text-align: left;
   hyphens: auto;
-  margin-top: 5px;
-  margin-left: 5px;
 }
 
 div.log-container h2 {
@@ -72,6 +92,14 @@ div.log-container p {
     gap: 13px
   }
 
+div.log-navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 1em;
+}
+
 .crimson-text-semibold {
   font-family: "Crimson Text", serif;
   font-weight: 600;
@@ -83,4 +111,13 @@ div.log-container p {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+.nav-icon {
+  cursor: pointer;
+  text-align: center;
+}
+
+i.nav-icon {
+  font-size: 30px;
 }
