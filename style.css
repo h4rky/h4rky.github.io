@@ -2,7 +2,8 @@
   --dark: #2B4141;
   --light: #c8c2ae;
   --accent-subdued: #57a773;
-  --background: #f4f4f4;
+  --background: #F9F3F1;
+  --highlight: #f38153;
 }
 
 body {
@@ -27,6 +28,7 @@ div{
 div.checkbox {
   width: 17px;
   height: 17px;
+  border-radius: 2px;
   position: relative;
 }
 
@@ -36,6 +38,13 @@ div.checkbox {
 
 .clickable:hover{
   opacity: 60%;
+}
+
+div.selected {
+  /*border: 2px solid;
+  border-radius: 3px;
+  border-color: var(--highlight);*/
+  box-shadow: 0 0 3px 2px var(--highlight);
 }
 
 div.log-container {

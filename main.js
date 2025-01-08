@@ -4,7 +4,6 @@ let container_checkbox = document.getElementById("checkbox-container");
 let container_log = document.getElementById("log-container");
 let log_nav_prev = document.getElementById("log-nav-prev");
 let log_nav_next = document.getElementById("log-nav-next");
-let curr_log;
 
 const FIRST_LOG = 1;
 
@@ -46,6 +45,8 @@ function load_log(slug) {
 }
 
 function navigate_to_log(target_log){
+    set_checkbox_focus(target_log);
+    
     curr_log = target_log;
     load_log(generate_slug(curr_log));
     set_nav_display();
@@ -60,11 +61,21 @@ function load_latest_log(){
 }
 
 function load_next_log(){
-    navigate_to_log(curr_log += 1);
+    target_log = curr_log + 1;
+    navigate_to_log(target_log);
 }
 
 function load_prev_log(){
-    navigate_to_log(curr_log -= 1);
+    target_log = curr_log - 1;
+    navigate_to_log(target_log);
+}
+
+function set_checkbox_focus(target_log){
+    origin_checkbox = document.getElementById("checkbox_" + curr_log.toString());
+    origin_checkbox.classList.remove("selected");
+
+    target_checkbox = document.getElementById("checkbox_" + target_log.toString());
+    target_checkbox.classList.add("selected");
 }
 
 array.forEach(element => {
@@ -86,4 +97,5 @@ array.forEach(element => {
 });
 
 // Load the first log by default
-navigate_to_log(FIRST_LOG);
+curr_log = FIRST_LOG;
+navigate_to_log(curr_log);
