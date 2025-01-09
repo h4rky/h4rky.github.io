@@ -25,16 +25,17 @@
     </rdf:RDF>
   </metadata>
   <g
-     id="layer1">
+     id="layer1"
+     style="stroke:#2b4141;stroke-opacity:1;fill:#2b4141;fill-opacity:1">
     <text
        xml:space="preserve"
-       style="font-weight:bold;font-size:10.5833px;line-height:1.25;font-family:Garamond;-inkscape-font-specification:'Garamond Bold';stroke-width:0.264583"
+       style="font-weight:bold;font-size:10.5833px;line-height:1.25;font-family:Garamond;-inkscape-font-specification:'Garamond Bold';stroke-width:0.264583;stroke:#2b4141;stroke-opacity:1;fill:#2b4141;fill-opacity:1"
        x="0.92915958"
        y="6.3887572"
        id="text12"><tspan
          id="tspan10"
          x="0.92915958"
          y="6.3887572"
-         style="stroke-width:0.264583">._.</tspan></text>
+         style="stroke-width:0.264583;stroke:#2b4141;stroke-opacity:1;fill:#2b4141;fill-opacity:1">._.</tspan></text>
   </g>
 </svg>
