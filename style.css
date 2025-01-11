@@ -54,10 +54,12 @@ svg.checkmark {
   opacity: 60%;
 }
 
+.clickable.disabled {
+  opacity: 30%;
+  cursor: auto;
+}
+
 div.selected {
-  /*border: 2px solid;
-  border-radius: 3px;
-  border-color: var(--highlight);*/
   box-shadow: 0 0 3px 2px var(--highlight);
 }
 
@@ -114,7 +116,6 @@ div.log-navigation-container {
 }
 
 .nav-icon {
-  cursor: pointer;
   text-align: center;
 }
 
