@@ -50,8 +50,10 @@ svg.checkmark {
   cursor: pointer;
 }
 
-.clickable:hover{
-  opacity: 60%;
+@media (hover: hover) {
+  .clickable:hover{
+    opacity: 60%;
+  }
 }
 
 .clickable.disabled {
