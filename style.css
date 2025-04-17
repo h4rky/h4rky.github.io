@@ -1,9 +1,27 @@
-:root {
-  --dark: #2B4141;
-  --light: #c8c2ae;
-  --accent-subdued: #57a773;
-  --background: #F9F3F1;
-  --highlight: #f38153;
+@media (prefers-color-scheme: light){
+  :root {
+    --main-content: rgb(16, 15, 15);
+    --checkbox-inactive: rgb(218, 216, 206);
+    --checkbox-active: rgb(135, 154, 57);
+    --main-background: rgb(255, 252, 240);
+    --checkbox-highlight: rgb(218, 112, 44);
+    --checkmark: rgb(255, 252, 240);
+    --hyperlink: rgb(32, 94, 166);
+    --hyperlink-visited: rgb(94, 64, 157);
+  }
+}
+
+@media (prefers-color-scheme: dark){
+  :root {
+    --main-content: rgb(206, 205, 195);
+    --checkbox-inactive: rgb(111, 110, 105);
+    --checkbox-active: rgb(102, 128, 11);
+    --main-background: rgb(16, 15, 15);
+    --checkbox-highlight: rgb(188, 82, 21);
+    --checkmark: rgb(206, 205, 195);
+    --hyperlink: rgb(67, 133, 190);
+    --hyperlink-visited: rgb(139, 126, 200);
+  }
 }
 
 body {
@@ -16,9 +34,9 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  background-color: var(--background);
+  background-color: var(--main-background);
   position: relative;
-  color: var(--dark)
+  color: var(--main-content)
 }
 
 div{
@@ -33,15 +51,15 @@ div.checkbox {
 }
 
 div.checkbox.checked {
-  background-color: var(--accent-subdued);
+  background-color: var(--checkbox-active);
 }
 
 div.checkbox.unchecked {
-  background-color: var(--light);
+  background-color: var(--checkbox-inactive);
 }
 
 svg.checkmark {
-  stroke: var(--background);
+  stroke: var(--checkmark);
   width: 17px;
   height: 17px;
 }
@@ -62,7 +80,7 @@ svg.checkmark {
 }
 
 div.selected {
-  box-shadow: 0 0 3px 2px var(--highlight);
+  box-shadow: 0 0 3px 2px var(--checkbox-highlight);
 }
 
 div.log-container {
@@ -91,10 +109,10 @@ div.log-container p {
 }
 
 .checkbox-container {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr); /* 10 columns */
-    gap: 13px
-  }
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 10 columns */
+  gap: 13px
+}
 
 div.log-navigation-container {
   display: flex;
@@ -123,4 +141,16 @@ div.log-navigation-container {
 
 i.nav-icon {
   font-size: 30px;
+}
+
+a:link {
+  color: var(--hyperlink)
+}
+
+a:visited{
+  color: var(--hyperlink-visited);
+}
+
+a:hover{
+  opacity: 60%;
 }
