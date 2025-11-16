@@ -1,4 +1,4 @@
-const DONE_COUNT = 31;
+const DONE_COUNT = 32;
 
 let container_checkbox = document.getElementById("checkbox-container");
 let container_log = document.getElementById("log-container");
